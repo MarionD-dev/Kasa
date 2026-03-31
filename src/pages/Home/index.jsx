@@ -1,5 +1,7 @@
 import {useState, useEffect} from 'react'
 import Card from '../../components/card'
+import Banner from '../../components/banner'
+
 
 function Home() {
     const[properties, setProperties] = useState([])
@@ -11,6 +13,7 @@ function Home() {
     }, [])
 
     return <div>
+        <Banner text="Chez vous, partout et ailleurs" />
         {properties.map(property => (
             <Card
                 key={property.id}

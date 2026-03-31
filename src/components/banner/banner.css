@@ -1,0 +1,19 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner p {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+}
