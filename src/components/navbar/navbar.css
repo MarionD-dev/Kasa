@@ -1,0 +1,31 @@
+.navbar__logo{
+    width: 100px;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: black;
+}
+.navbar__links {
+    display: flex;
+    gap: 20px;
+}
+.navbar__links a {
+    color: black;
+    text-decoration: none;
+}
+.navbar__links a:hover {
+    text-decoration: underline;
+}
+
+.navbar__links a.active {
+    text-decoration: underline;
+}
+
+.navbar li {
+    list-style: none;
+}

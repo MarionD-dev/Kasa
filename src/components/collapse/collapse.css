@@ -16,7 +16,7 @@
 
 .collapse__arrow {
   transition: transform 0.3s ease;
-  transform: rotate(180deg); /* fermé = pointe vers le bas */
+  transform: rotate(90deg); /* fermé = pointe vers le bas */
 }
 
 .collapse__arrow.open {
