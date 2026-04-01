@@ -1,6 +1,12 @@
-.footer__banner {
+.footer {
   background-color: #000;
-  color: #fff;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+}
+
+.footer__banner {
+  width: 145px;
+  height: auto;
 }
