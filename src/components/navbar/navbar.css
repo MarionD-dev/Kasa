@@ -1,5 +1,5 @@
 .navbar__logo{
-    width: 100px;
+    width: 130px;
     height: auto;
 }
 
@@ -9,6 +9,8 @@
     align-items: center;
     padding: 20px;
     color: black;
+    margin-top: 45px;
+    margin : 0 30px;
 }
 .navbar__links {
     display: flex;
@@ -19,10 +21,6 @@
     text-decoration: none;
 }
 .navbar__links a:hover {
-    text-decoration: underline;
-}
-
-.navbar__links a.active {
     text-decoration: underline;
 }
 

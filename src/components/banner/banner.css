@@ -1,19 +1,40 @@
 .banner {
   position: relative;
-  width: 100%;
-  height: 400px;
+  width: auto;
+  height: 140px;
+  margin: 0 40px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px;
 }
 
 .banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+}
+
+.banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+
 }
 
 .banner p {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  font-size: 24px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
+  text-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px;
 }
