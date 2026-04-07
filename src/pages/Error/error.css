@@ -3,12 +3,14 @@ h1 {
   font-size: 288px;
   margin-bottom: 0;
   line-height: 1;
+  font-weight: 700;
 }
 
 p {
   color: #FF6060;
   font-size: 18px;
   text-align: center;
+
 }
 
 a {
