@@ -31,7 +31,20 @@ function Logement() {
     }
 }
 
-return <div>Page Logement {id}</div>
-}
+if (!logement) return <div>Loading...</div>
 
+
+return (
+    <div>
+        {logement.pictures.length > 1 && (
+            <button onClick={handlePrev}>←</button>
+        )}
+        <img src={logement.pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+        {logement.pictures.length > 1 && (
+            <button onClick={handleNext}>→</button>
+        )}
+    </div>
+)
+
+}
 export default Logement
