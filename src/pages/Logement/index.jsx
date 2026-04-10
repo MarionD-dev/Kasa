@@ -1,5 +1,7 @@
+import "./logement.css"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import Collapse from "../../components/Collapse"
 
 function Logement() {
     const { id } = useParams()
@@ -35,16 +37,50 @@ if (!logement) return <div>Loading...</div>
 
 
 return (
-    <div>
-        {logement.pictures.length > 1 && (
-            <button onClick={handlePrev}>←</button>
-        )}
-        <img src={logement.pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
-        {logement.pictures.length > 1 && (
-            <button onClick={handleNext}>→</button>
-        )}
-    </div>
-)
+  <div className="logement">
 
+    <div className="logement__carrousel">
+      {logement.pictures.length > 1 && (
+        <button onClick={handlePrev}>←</button>
+      )}
+      <img src={logement.pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+      {logement.pictures.length > 1 && (
+        <button onClick={handleNext}>→</button>
+      )}
+    </div>
+
+
+    <div className="logement__infos">
+      
+      <div className="logement_infos_left">
+        <h1>{logement.title}</h1>
+        <p>{logement.location}</p>
+        <div className="logement__tags">
+          {logement.tags.map((tag, index) => (
+            <span key={index} className="logement__tag">{tag}</span>
+          ))}
+        </div>
+      </div>
+
+      <div className="logement_infos_right">
+        <div className="logement__host">
+          <span>{logement.host.name}</span>
+          <img src={logement.host.picture} alt={logement.host.name} />
+        </div>
+        <div className="logement__rating">
+          {Array(5).fill(0).map((_, index) => (
+            <span key={index} style={{ color: index < logement.rating ? '#FF6060' : '#E3E3E3' }}>★</span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div className="logement__collapses">
+      <Collapse title="Description" content={logement.description} />
+      <Collapse title="Équipements" content={logement.equipments} />
+    </div>
+
+  </div>
+)
 }
 export default Logement
