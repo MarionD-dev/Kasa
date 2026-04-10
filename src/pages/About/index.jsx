@@ -1,4 +1,4 @@
-import Collapse from "../../components/collapse"
+import Collapse from "../../components/Collapse"
 
 function About() {
     return (

@@ -1,4 +1,5 @@
 import "./logement.css"
+import arrowcaroussel from "../../assets/arrowcaroussel.png"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Collapse from "../../components/Collapse"
@@ -41,11 +42,17 @@ return (
 
     <div className="logement__carrousel">
       {logement.pictures.length > 1 && (
-        <button onClick={handlePrev}>←</button>
+        <button onClick={handlePrev}>
+          <img src={arrowcaroussel} alt="Previous" style={{ transform: "rotate(180deg)" }} />
+        </button>
       )}
       <img src={logement.pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
-      {logement.pictures.length > 1 && (
-        <button onClick={handleNext}>→</button>
+      {logement.pictures.length > 1 && (<>
+          <span className="logement_carrousel_counter">{currentIndex + 1}/{logement.pictures.length}</span>
+          <button onClick={handleNext}>
+            <img src={arrowcaroussel} alt="Next" />
+          </button>
+        </>
       )}
     </div>
 

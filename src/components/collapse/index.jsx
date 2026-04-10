@@ -7,6 +7,7 @@ function Collapse({ title, content }) {
    return (
       <div className="collapse">
          <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
+            <h3>{title}</h3>
             <span className={`collapse__arrow ${isOpen ? 'open' : ''}`}>
             <img 
                 src={arrow} 
@@ -14,7 +15,6 @@ function Collapse({ title, content }) {
                 className={`collapse__arrow ${isOpen ? 'open' : ''}`} 
             />
             </span>
-            <h3>{title}</h3>
          </div>
          {isOpen && (
             <div className="collapse__content">
