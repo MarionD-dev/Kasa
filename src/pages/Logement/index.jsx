@@ -1,18 +1,26 @@
 import "./logement.css"
 import arrowcaroussel from "../../assets/arrowcaroussel.png"
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import Collapse from "../../components/Collapse"
 
 function Logement() {
     const { id } = useParams()
     const [logement, setLogement] = useState(null)
     const [currentIndex, setCurrentIndex] = useState(0)
+    const navigate = useNavigate() 
 
     useEffect(() => {
         fetch(`http://localhost:8080/api/properties/${id}`)
             .then(response => response.json())
-            .then(data => setLogement(data))
+            .then(data => {
+    if (data === "Not found") {
+        navigate("/404")
+    } else {
+        setLogement(data)
+    }
+})
+            .catch(error => console.error('Error fetching logement:', error))
     }, [id])  
 
     console.log(logement)
