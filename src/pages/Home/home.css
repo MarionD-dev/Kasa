@@ -7,3 +7,15 @@
   border-radius: 25px;
   margin: 20px 40px;
 }
+
+
+
+@media (max-width: 375px) {
+  .cards__grid {
+    grid-template-columns: 1fr;
+    margin: 0;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 20px;
+  }
+}

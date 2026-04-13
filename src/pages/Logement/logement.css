@@ -120,3 +120,34 @@
   border-radius: 15px;
   font-size: 14px;
 }
+
+
+
+@media (max-width: 375px) {
+  .logement {
+    padding: 0 20px;
+  }
+
+  .logement__carrousel {
+    height: 255px;
+    border-radius: 10px;
+  }
+
+  .logement__infos {
+    flex-direction: column;
+  }
+
+  .logement__infos--right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+  .logement__collapses {
+    grid-template-columns: 1fr;
+  }
+
+ 
+  }

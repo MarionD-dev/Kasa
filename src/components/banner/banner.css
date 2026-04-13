@@ -38,3 +38,18 @@
   width: 80%;
   text-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px;
 }
+
+
+@media (max-width: 375px) {
+  .banner {
+    margin: 0 20px;
+    height: 111px;
+    margin-bottom: 20px;
+  }
+
+  .banner p {
+    font-size: 25px;
+    text-align: left;
+  }
+
+}
