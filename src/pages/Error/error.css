@@ -26,3 +26,25 @@ a {
   justify-content: center;
   height: 100vh;
 }
+
+
+@media (max-width: 375px) {
+  .error {
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .error h1 {
+    font-size: 96px;
+  }
+
+  .error p {
+    font-size: 14px;
+    width: 80%;
+    text-align: center;
+  }
+
+  .error a {
+    font-size: 14px;
+  }
+}
