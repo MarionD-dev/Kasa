@@ -1,13 +1,12 @@
 import "./logement.css"
-import arrowcaroussel from "../../assets/arrowcaroussel.png"
 import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import Collapse from "../../components/Collapse"
+import Carousel from "../../components/carousel"
 
 function Logement() {
     const { id } = useParams()
     const [logement, setLogement] = useState(null)
-    const [currentIndex, setCurrentIndex] = useState(0)
     const navigate = useNavigate() 
 
     useEffect(() => {
@@ -24,23 +23,6 @@ function Logement() {
     }, [id])  
 
     console.log(logement)
-    
-    
-    const handleNext = () => {
-        if (currentIndex === logement.pictures.length - 1) {
-            setCurrentIndex(0)
-        } else {
-            setCurrentIndex(currentIndex + 1)
-        }
-    }
-
-    const handlePrev = () => {
-    if (currentIndex === 0) {
-        setCurrentIndex(logement.pictures.length - 1)
-    } else {
-        setCurrentIndex(currentIndex - 1)
-    }
-}
 
 if (!logement) return <div>Loading...</div>
 
@@ -48,22 +30,7 @@ if (!logement) return <div>Loading...</div>
 return (
   <div className="logement">
 
-    <div className="logement__carrousel">
-      {logement.pictures.length > 1 && (
-        <button onClick={handlePrev}>
-          <img src={arrowcaroussel} alt="Previous" style={{ transform: "rotate(180deg)" }} />
-        </button>
-      )}
-      <img src={logement.pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
-      {logement.pictures.length > 1 && (<>
-          <span className="logement_carrousel_counter">{currentIndex + 1}/{logement.pictures.length}</span>
-          <button onClick={handleNext}>
-            <img src={arrowcaroussel} alt="Next" />
-          </button>
-        </>
-      )}
-    </div>
-
+    <Carousel pictures={logement.pictures} /> 
 
     <div className="logement__infos">
       
