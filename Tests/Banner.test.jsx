@@ -1,4 +1,4 @@
-import Banner from "./index";
+import Banner from "../src/components/banner/index";
 import { render, screen } from "@testing-library/react";
 
 describe("Banner", () => {
