@@ -1,5 +1,5 @@
 
-import Collapse from './index'
+import Collapse from "../src/components/collapse/index"
 import { render, screen, fireEvent } from '@testing-library/react'
 
 describe('Collapse', () => {
