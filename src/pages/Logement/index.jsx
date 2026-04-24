@@ -7,24 +7,24 @@ import Carousel from "../../components/carousel"
 function Logement() {
     const { id } = useParams()
     const [logement, setLogement] = useState(null)
-    const navigate = useNavigate() 
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetch(`http://localhost:8080/api/properties/${id}`)
             .then(response => response.json())
             .then(data => {
-    if (data === "Not found") {
-        navigate("/404")
-    } else {
-        setLogement(data)
-    }
-})
+                if (data && data !== "Not found") {
+                    setLogement(data)
+                } else {
+                    navigate("/404")
+                }
+            })
             .catch(error => console.error('Error fetching logement:', error))
-    }, [id])  
+    }, [id])
 
     console.log(logement)
 
-if (!logement) return <div>Loading...</div>
+    if (!logement) return <div>Loading...</div>
 
 
 return (
