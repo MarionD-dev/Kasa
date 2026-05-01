@@ -129,6 +129,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-top: 15px;
 }
 
 
@@ -149,8 +150,9 @@
   grid-template-columns: 1fr;
 }
 
-.logement__tags {
-  flex-wrap: wrap;
+.logement__tag {
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .logement__rating svg {
@@ -167,8 +169,7 @@
 }
  
 .logement h1 {
-  font-size: 22px;
-  font-weight: normal;
-  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
 }
   }
