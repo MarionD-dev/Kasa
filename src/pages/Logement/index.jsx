@@ -3,6 +3,8 @@ import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import Collapse from "../../components/Collapse"
 import Carousel from "../../components/carousel"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faStar } from "@fortawesome/free-solid-svg-icons"
 
 function Logement() {
     const { id } = useParams()
@@ -50,10 +52,15 @@ return (
           <img src={logement.host.picture} alt={logement.host.name} />
         </div>
         <div className="logement__rating">
-          {Array(5).fill(0).map((_, index) => (
-            <span key={index} style={{ color: index < logement.rating ? '#FF6060' : '#E3E3E3' }}>★</span>
-          ))}
-        </div>
+        {Array(5).fill(0).map((_, index) => (
+       <FontAwesomeIcon 
+      key={index}
+      icon={faStar}
+      style={{ color: index < logement.rating ? '#FF6060' : '#E3E3E3' }}
+      />
+       ))}
+    </div>
+    
       </div>
     </div>
 
