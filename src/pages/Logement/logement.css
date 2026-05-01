@@ -41,7 +41,7 @@
   gap: 10px;
 }
 .logement__host span {
-  color: black;
+  color: #FF6060; 
   font-size: 16px;
 }
 .logement__host img {

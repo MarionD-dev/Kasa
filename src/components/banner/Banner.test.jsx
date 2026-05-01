@@ -1,5 +1,6 @@
 import Banner from "./index";
 import { render, screen } from "@testing-library/react";
+import { describe, it, expect } from "vitest";
 
 describe("Banner", () => {
   it("renders the banner image", () => {

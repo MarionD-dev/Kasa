@@ -20,7 +20,7 @@ function Logement() {
                 }
             })
             .catch(error => console.error('Error fetching logement:', error))
-    }, [id])
+    }, [id, navigate])
 
     console.log(logement)
 

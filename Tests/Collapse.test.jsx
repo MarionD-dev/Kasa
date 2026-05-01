@@ -1,6 +1,7 @@
 
-import Collapse from "../src/components/collapse/index"
+import Collapse from "../src/components/Collapse/index"
 import { render, screen, fireEvent } from '@testing-library/react'
+import { describe, it, expect } from 'vitest'
 
 describe('Collapse', () => {
     it('le contenu est caché par défaut', () => {
