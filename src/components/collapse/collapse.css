@@ -39,7 +39,9 @@
 }
 
 .collapse__content > div {
-  padding: 10px;
+  padding: 25px;
+  text-align: left;
+  color: black;
 }
 
 .collapse .collapse__content ul {
