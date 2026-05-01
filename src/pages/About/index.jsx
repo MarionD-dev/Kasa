@@ -6,7 +6,8 @@ function About() {
     return (
         <div>
         <div className="banner">
-          <img src={imgabout} alt="Banner Image" />
+            <img src={imgabout} alt="Banner Image" />
+            <div className="banner__overlay" style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}></div>
         </div>
         <div className="about__infos">
             <Collapse title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont vérifiées." />
