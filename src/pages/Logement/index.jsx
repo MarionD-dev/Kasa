@@ -66,7 +66,16 @@ return (
 
     <div className="logement__collapses">
       <Collapse title="Description" content={logement.description} />
-      <Collapse title="Équipements" content={logement.equipments} />
+      <Collapse 
+  title="Équipements" 
+  content={
+    <ul>
+      {logement.equipments.map((equipment, index) => (
+        <li key={index}>{equipment}</li>
+      ))}
+    </ul>
+  } 
+/>
     </div>
 
   </div>

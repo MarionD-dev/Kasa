@@ -41,3 +41,14 @@
 .collapse__content > div {
   padding: 10px;
 }
+
+.collapse .collapse__content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.collapse .collapse__content li {
+  color: black;
+}
